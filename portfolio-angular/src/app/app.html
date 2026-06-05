@@ -1,3 +1,68 @@
-<h1>{{ title() }}</h1>
+<mat-toolbar color="primary" class="header">
+  <span>{{ title() }}</span>
+</mat-toolbar>
 
-<p>Bem-Vindo ao meu portfólio - em construção com Angular</p>
+<main class="container">
+  <mat-card class="profile-card">
+    <mat-card-header>
+      <mat-card-title class="nome-principal">Olá, eu sou a {{ nome() }}!</mat-card-title>
+      <mat-card-subtitle class="estudante-status">{{ subnome() }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content class="sobre-mim-texto">
+      <h3>Sobre Mim</h3>
+      <p>
+        Meu nome é Joice Martins, tenho 16 anos e sou estudante do Curso Técnico em Informática Integrado ao Ensino Médio no Instituto Federal do Paraná (IFPR). 
+        Tenho interesse nas áreas de tecnologia, desenvolvimento de sistemas e empreendedorismo, buscando constantemente aprimorar meus conhecimentos por meio de projetos acadêmicos 
+        e experiências práticas. Atualmente, participo do desenvolvimento de soluções tecnológicas voltadas à organização e otimização de processos, 
+        aplicando conceitos de análise, projeto e desenvolvimento de sistemas.
+    </mat-card-content>
+  </mat-card>
+
+  <h2 class="section-title">Meus Projetos</h2>
+  <div class="projects-grid">
+    @for (projeto of meusProjetos(); track projeto.nome) {
+      <mat-card class="project-item">
+        <mat-card-header>
+          <mat-card-title>{{ projeto.nome }}</mat-card-title>
+          <mat-card-subtitle>{{ projeto.tech }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{ projeto.descricao }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <a mat-flat-button [href]="projeto.link" target="_blank">
+            <mat-icon>code</mat-icon> VER NO GITHUB
+          </a>
+        </mat-card-actions>
+      </mat-card>
+    }
+  </div>
+
+  <h2 class="section-title">Contato</h2>
+  <mat-card class="contact-card">
+    <mat-card-content>
+      <p class="instrucao-contato">Gostou do meu trabalho? Mande uma mensagem!</p>
+      
+      <form class="contact-form">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Seu Nome</mat-label>
+          <input matInput placeholder="Ex. Maria Silva">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>E-mail</mat-label>
+          <input matInput type="email" placeholder="email@exemplo.com">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Mensagem</mat-label>
+          <textarea matInput rows="4" placeholder="Como posso te ajudar?"></textarea>
+        </mat-form-field>
+
+        <button mat-flat-button color="primary" class="btn-enviar" (click)="enviarMensagem()">
+          <mat-icon>send</mat-icon> ENVIAR MENSAGEM
+        </button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</main>

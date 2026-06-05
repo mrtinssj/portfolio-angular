@@ -1,0 +1,149 @@
+/* Importando a fonte Inter para um ar mais moderno e limpo */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+:host {
+  font-family: 'Inter', sans-serif;
+  /* Nova Paleta solicitada: Azul bem escuro e Verde fechado */
+  --primary-color: #0d1b2a;   /* Azul Marinho quase preto (Oxford Blue) */
+  --accent-color: #2d6a4f;    /* Verde fechado (Hunter Green/Emerald) */
+  --text-light: #f8f9fa;
+  --bg-subtle: #e9ecef;
+}
+
+.header {
+  justify-content: center;
+  background: var(--primary-color) !important;
+  color: var(--text-light) !important;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Card de Perfil - Nível A */
+.profile-card {
+  margin-bottom: 50px;
+  background: white;
+  border-radius: 12px !important;
+  border: none !important;
+  /* A bordinha agora no verde fechado */
+  border-left: 10px solid var(--accent-color) !important;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08) !important;
+  padding: 25px;
+}
+
+.profile-card mat-card-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--primary-color);
+}
+
+.section-title {
+  text-align: left;
+  margin: 60px 0 30px;
+  font-weight: 800;
+  font-size: 1.8rem;
+  color: var(--primary-color);
+}
+
+/* Grid de Projetos */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+/* Itens do Projeto */
+.project-item {
+  border-radius: 12px !important;
+  border: 1px solid rgba(0,0,0,0.05) !important;
+  background: #ffffff;
+}
+
+/* Customizando o botão do Material para as cores da sua marca */
+.project-item mat-card-actions a[mat-flat-button] {
+  background-color: var(--accent-color) !important; /* O Verde Fechado */
+  color: #ffffff !important;                       /* Texto Branco */
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: 100%;             /* Faz o botão ocupar a largura total do card */
+  border-radius: 4px;      /* Bordas um pouco mais retas para parecer profissional */
+  transition: all 0.3s ease;
+}
+
+/* Efeito ao passar o mouse no botão */
+.project-item mat-card-actions a[mat-flat-button]:hover {
+  background-color: var(--primary-color) !important; /* Muda para o Azul Escuro no hover */
+  transform: scale(1.02);                            /* Dá um leve zoom */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.nome-principal {
+  font-size: 2.5rem !important; /* Aumenta um pouco seu nome */
+  font-weight: 800 !important;
+  color: var(--primary-color);
+  margin-bottom: 12px !important; /* Empurra o texto de baixo para longe */
+}
+
+.estudante-status {
+  font-size: 1.1rem !important;
+  color: var(--accent-color) !important; /* Deixa o "Instituto Federal" no verde fechado */
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.profile-card {
+  padding: 40px !important; /* Aumenta o espaço interno do card */
+}
+
+/* ... manter as variáveis de cores que já definimos ... */
+
+.sobre-mim-texto h3 {
+  margin-top: 20px;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.sobre-mim-texto p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+.contact-card {
+  background: #ffffff;
+  max-width: 600px;
+  margin: 0 auto 50px auto;
+  padding: 20px;
+  border-radius: 12px !important;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.btn-enviar {
+  background-color: var(--accent-color) !important;
+  height: 50px;
+  font-size: 1rem !important;
+}
+
+.instrucao-contato {
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
