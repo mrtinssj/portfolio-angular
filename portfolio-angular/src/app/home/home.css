@@ -1,0 +1,93 @@
+.hero {
+  padding: 3rem 1.5rem 2rem;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #888;
+  margin: 0 0 1rem;
+}
+
+.name {
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 1.1;
+  margin: 0 0 1rem;
+}
+
+.name span {
+  color: #7F77DD;
+}
+
+.role-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #EEEDFE;
+  color: #3C3489;
+  font-size: 13px;
+  padding: 5px 12px;
+  border-radius: 20px;
+}
+
+.role-badge mat-icon {
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+}
+
+mat-divider {
+  margin: 2rem 0;
+}
+
+.bio {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.7;
+  max-width: 480px;
+  margin: 0 0 2rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin-bottom: 2rem;
+}
+
+.cards mat-card {
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cards mat-icon {
+  font-size: 22px;
+  width: 22px;
+  height: 22px;
+  color: #7F77DD;
+  margin-bottom: 6px;
+}
+
+.label {
+  font-size: 12px;
+  color: #888;
+  margin: 0;
+}
+
+.value {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.cta-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}

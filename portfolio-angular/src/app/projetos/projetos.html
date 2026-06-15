@@ -1,0 +1,27 @@
+<section class="projetos">
+  <p class="eyebrow">Portfólio</p>
+  <h2 class="titulo">Meus <span>projetos</span></h2>
+
+  <div class="grid">
+    @for (projeto of projetos; track projeto.nome) {
+      <mat-card class="card">
+        <mat-card-content>
+          <mat-chip-set>
+            <mat-chip>
+              <mat-icon matChipAvatar>{{ projeto.icone }}</mat-icon>
+              {{ projeto.tech }}
+            </mat-chip>
+          </mat-chip-set>
+
+          <p class="card-nome">{{ projeto.nome }}</p>
+          <p class="card-desc">{{ projeto.descricao }}</p>
+
+          <a mat-button [href]="projeto.link" target="_blank" class="card-link">
+            <mat-icon>open_in_new</mat-icon>
+            Ver no GitHub
+          </a>
+        </mat-card-content>
+      </mat-card>
+    }
+  </div>
+</section>

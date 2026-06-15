@@ -1,0 +1,37 @@
+<section class="contato">
+  <p class="eyebrow">Fale comigo</p>
+  <h2 class="titulo">Entre em <span>contato</span></h2>
+  <p class="subtitulo">
+    Tem alguma dúvida, proposta ou só quer trocar uma ideia?
+    Preencha o formulário e entrarei em contato.
+  </p>
+
+  <div class="email-badge">
+    <mat-icon>mail</mat-icon>
+    martinss.joice2009@gmail.com
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <form class="form" [formGroup]="form" (ngSubmit)="enviar()">
+    <mat-form-field appearance="outline">
+      <mat-label>Seu nome</mat-label>
+      <input matInput formControlName="nome" placeholder="Como posso te chamar?" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Seu e-mail</mat-label>
+      <input matInput formControlName="email" type="email" placeholder="Para eu poder responder" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Mensagem</mat-label>
+      <textarea matInput formControlName="mensagem" rows="5" placeholder="Escreva sua mensagem..."></textarea>
+    </mat-form-field>
+
+    <button mat-flat-button type="submit" class="btn-enviar">
+      <mat-icon>send</mat-icon>
+      Enviar mensagem
+    </button>
+  </form>
+</section>
