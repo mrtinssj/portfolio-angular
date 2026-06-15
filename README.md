@@ -82,6 +82,34 @@ Configuração do ambiente de desenvolvimento, instalação do Angular CLI e Ang
 ### Etapa 2 — Componentes, Navegação e Rotas
 Criação dos 4 componentes de página, barra de navegação, roteamento e menu responsivo com `mat-sidenav`.
 
+### Etapa 3 — API PHP + MariaDB
+Criação da API REST com PHP e MariaDB: banco de dados `dwii_db`, endpoints `/api/projetos.php` e `/api/tecnologias.php` servindo JSON, filtro por `status`, endpoint de detalhe por `id` com `prepare()` e tratamento de erro com `http_response_code()`.
+
+---
+
+## 🗄️ API (Back-end PHP + MariaDB)
+
+### Pré-requisitos
+- MariaDB rodando com usuário `dwii_user` e banco `dwii_db`
+
+### 1. Criar o banco
+```bash
+mariadb -u dwii_user -pdwii2026 < sql/setup.sql
+```
+
+### 2. Subir o servidor PHP
+```bash
+/usr/bin/php -S 0.0.0.0:8000
+```
+
+### 3. Endpoints disponíveis
+
+| Endpoint | Método | Descrição |
+|----------|--------|-----------|
+| `/api/projetos.php` | GET | Lista projetos publicados |
+| `/api/projetos.php?id=1` | GET | Detalhe de um projeto |
+| `/api/tecnologias.php` | GET | Lista tecnologias ativas |
+
 ---
 
 <div align="center">
