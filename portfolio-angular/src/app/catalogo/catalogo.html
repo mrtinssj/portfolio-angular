@@ -8,6 +8,9 @@
   @if (erro) {
     <p>{{ erro }}</p>
   }
+  @if (!carregando && !erro && tecnologias.length === 0) {
+    <p>Nenhuma tecnologia cadastrada ainda.</p>
+  }
 
   <div class="grid">
     @for (t of tecnologias; track t.id) {

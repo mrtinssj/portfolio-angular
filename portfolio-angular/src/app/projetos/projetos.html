@@ -8,6 +8,9 @@
   @if (erro) {
     <p>{{ erro }}</p>
   }
+  @if (!carregando && !erro && projetos.length === 0) {
+    <p>Nenhum projeto publicado ainda.</p>
+  }
 
   <div class="grid">
     @for (p of projetos; track p.id) {
