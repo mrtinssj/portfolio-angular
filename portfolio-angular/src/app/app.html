@@ -1,5 +1,4 @@
 <mat-sidenav-container class="container">
-
   <mat-sidenav #sidenav mode="over" class="sidenav">
     <div class="sidenav-header">
       <span class="brand-side">Joice<span>.dev</span></span>
@@ -7,7 +6,6 @@
         <mat-icon>close</mat-icon>
       </button>
     </div>
-
     <mat-nav-list>
       <a mat-list-item routerLink="/" routerLinkActive="ativo" [routerLinkActiveOptions]="{ exact: true }" (click)="sidenav.close()">
         <mat-icon matListItemIcon>home</mat-icon>
@@ -21,13 +19,16 @@
         <mat-icon matListItemIcon>folder</mat-icon>
         <span matListItemTitle>Projetos</span>
       </a>
+      <a mat-list-item routerLink="/catalogo" routerLinkActive="ativo" (click)="sidenav.close()">
+        <mat-icon matListItemIcon>category</mat-icon>
+        <span matListItemTitle>Catálogo</span>
+      </a>
       <a mat-list-item routerLink="/contato" routerLinkActive="ativo" (click)="sidenav.close()">
         <mat-icon matListItemIcon>mail</mat-icon>
         <span matListItemTitle>Contato</span>
       </a>
     </mat-nav-list>
   </mat-sidenav>
-
   <mat-sidenav-content>
     <nav class="navbar">
       <button mat-icon-button class="menu-btn" (click)="sidenav.open()">
@@ -39,13 +40,12 @@
         <a mat-button class="nav-link" routerLink="/" routerLinkActive="ativo" [routerLinkActiveOptions]="{ exact: true }">Início</a>
         <a mat-button class="nav-link" routerLink="/sobre" routerLinkActive="ativo">Sobre</a>
         <a mat-button class="nav-link" routerLink="/projetos" routerLinkActive="ativo">Projetos</a>
+        <a mat-button class="nav-link" routerLink="/catalogo" routerLinkActive="ativo">Catálogo</a>
         <a mat-button class="nav-link" routerLink="/contato" routerLinkActive="ativo">Contato</a>
       </div>
     </nav>
-
     <main>
       <router-outlet></router-outlet>
     </main>
   </mat-sidenav-content>
-
 </mat-sidenav-container>

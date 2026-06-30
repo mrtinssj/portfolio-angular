@@ -1,0 +1,25 @@
+<section class="catalogo">
+  <p class="eyebrow">Tecnologias</p>
+  <h2 class="titulo">Meu <span>catálogo</span></h2>
+
+  @if (carregando) {
+    <p>Carregando catálogo...</p>
+  }
+  @if (erro) {
+    <p>{{ erro }}</p>
+  }
+
+  <div class="grid">
+    @for (t of tecnologias; track t.id) {
+      <mat-card class="card">
+        <mat-card-content>
+          <mat-chip-set>
+            <mat-chip>{{ t.categoria }}</mat-chip>
+          </mat-chip-set>
+          <p class="card-nome">{{ t.nome }}</p>
+          <p class="card-desc">{{ t.descricao }}</p>
+        </mat-card-content>
+      </mat-card>
+    }
+  </div>
+</section>
